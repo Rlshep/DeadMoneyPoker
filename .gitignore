@@ -98,3 +98,5 @@ Servers/
 .idea
 /build
 *.log
+.gradle
+/nppBackup
