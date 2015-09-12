@@ -13,6 +13,7 @@ class Result {
     String roundOut
     int hits
     String hitmanName
+    boolean championshipInd
 
     static constraints = {
         playerName(blank: false)
@@ -20,6 +21,7 @@ class Result {
         timeOut(nullable: true)
         roundOut(nullable: true)
         hitmanName(nullable: true)
+        championshipInd(defaultValue: false)
     }
 
     static def getResultsByMonthYear(Date date) {
@@ -33,6 +35,14 @@ class Result {
         }
 
         query.list()
+    }
+
+    static def getDatesPlayedBySeason(season) {
+        Result.executeQuery("select distinct r.datePlayed from Result r join r.season s where s.name = '" + season.name + "' order by r.datePlayed")
+    }
+
+    static def getPlayerNamesBySeason(season) {
+        Result.executeQuery("select distinct r.playerName from Result r join r.season s where s.name = '" + season.name + "'")
     }
 
     static def getLatestResult() {

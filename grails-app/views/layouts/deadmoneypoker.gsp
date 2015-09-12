@@ -14,6 +14,7 @@
     <asset:javascript src="jquery.dataTables.js"/>
     <!--<asset:javascript src="jquery.maskedinput.min.js"/>-->
     <asset:javascript src="MonthPicker.js"/>
+    <asset:javascript src="date-en-US.js"/>
     <asset:javascript src="deadmoneypoker.js"/>
 
     <!--<asset:stylesheet src="jquery-ui.css"/>-->

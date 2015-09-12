@@ -3,6 +3,7 @@
 	<head>
 		<meta name="layout" content="deadmoneypoker"/>
 		<title>Dead Money Poker - Results</title>
+        <asset:javascript src="results.js"/>
 	</head>
 	<body>
       <div id="tableContainer">
