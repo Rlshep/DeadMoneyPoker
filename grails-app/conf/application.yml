@@ -94,7 +94,7 @@ environments:
     production:
         dataSource:
             dbCreate: update
-            url: jdbc:postgresql://rxailvkgvwsegn:SPt8vqgkIjLWd6QfZzF7hayXKb@ec2-54-235-250-41.compute-1.amazonaws.com:5432/d1kto9qsvmuire
+            url: jdbc:postgresql://hndyjhcyuhrjvj:p6OwCsaEXALRKMHGqOwy__IwvD@ec2-50-16-229-89.compute-1.amazonaws.com/d6bampohe5e76n
             properties:
                 jmxEnabled: true
                 initialSize: 5
