@@ -100,3 +100,8 @@ Servers/
 *.log
 .gradle
 /nppBackup
+out
+*.iml
+*.ipr
+*.iws
+.DS_Store
