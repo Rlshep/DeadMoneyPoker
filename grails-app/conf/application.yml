@@ -93,7 +93,7 @@ environments:
             url: jdbc:postgresql://localhost/richard_dev
     production:
         dataSource:
-            dbCreate: update
+            dbCreate: create-drop
             url: jdbc:postgresql://hndyjhcyuhrjvj:p6OwCsaEXALRKMHGqOwy__IwvD@ec2-50-16-229-89.compute-1.amazonaws.com/d6bampohe5e76n
             properties:
                 jmxEnabled: true
