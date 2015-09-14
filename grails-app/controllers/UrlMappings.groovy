@@ -7,7 +7,7 @@ class UrlMappings {
             }
         }
 
-        "/"(controller:"results")
+        "/"(redirect:"/results")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }

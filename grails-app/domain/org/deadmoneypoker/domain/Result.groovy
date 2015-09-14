@@ -37,6 +37,15 @@ class Result {
         query.list()
     }
 
+    static def getSeasonChampionshipResult(mySeason) {
+        def query = Result.where {
+            championshipInd == true
+            season.name == mySeason.name
+        }
+
+        query.find()
+    }
+
     static def getDatesPlayedBySeason(season) {
         Result.executeQuery("select distinct r.datePlayed from Result r join r.season s where s.name = '" + season.name + "' order by r.datePlayed")
     }

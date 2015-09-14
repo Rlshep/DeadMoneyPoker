@@ -8,21 +8,40 @@ import org.deadmoneypoker.domain.Season
 class StandingsController {
     private static final TOTAL = 'Total'
     private static final NAME = 'Name'
+    private static final NULL = 'null'
 
     def index() { }
 
     def load() {
-        render getStandingsJson(getDateFromParam())
-    }
-
-    def loadDateRange() {
-        def dateRange = ["lowDate": Season.getFirstSeason().startYear, "highDate": Season.getLatestSeason().startYear]
-        render dateRange as JSON
+        render getStandingsJson(getParamSeasonName())
     }
 
     def loadHeaders() {
-        def season = Season.getSeason(getDateFromParam())
+        def season = Season.getSeason(getParamSeasonName())
         render getHeadersJson(Result.getDatesPlayedBySeason(season)) as JSON
+    }
+
+    def getSeasonNames() {
+        render Season.list(sort: 'startYear', order: 'desc') as JSON
+    }
+
+    def getChampionshipResult() {
+        render getChampionshipResultJson() as JSON
+    }
+
+    private getChampionshipResultJson() {
+        def season = Season.getSeason(getParamSeasonName())
+        ["data": Result.getSeasonChampionshipResult(season)]
+    }
+
+    private getParamSeasonName() {
+        def seasonName = null
+
+        if (NULL != params.seasonName && params.seasonName) {
+            seasonName = params.seasonName
+        }
+
+        seasonName
     }
 
     private getHeadersJson(results) {
@@ -39,23 +58,12 @@ class StandingsController {
         ["data": headers]
     }
 
-    private Date getDateFromParam() {
-        def date;
-
-        if (params.seasonDate) {
-            if (params.seasonDate.length() == 7) {
-                date = new Date().parse(DeadMoneyPokerConstants.MONTH_FORMAT, params.seasonDate)
-            }
-        }
-        date
-    }
-
-    private getStandingsJson(date) {
+    private getStandingsJson(seasonName) {
         def json = '{"data": ['
         def name
         def points
         def totalPoints
-        def season = Season.getSeason(date)
+        def season = Season.getSeason(seasonName)
 
         def allPlayerNames = Result.getPlayerNamesBySeason(season)
         def datesPlayed = Result.getDatesPlayedBySeason(season)

@@ -11,20 +11,16 @@ class Season {
         startYear(blank: false, unique: true)
     }
 
-    public static def getSeason(date) {
-        def year
+    public static def getSeason(seasonName) {
+        def season
 
-        if (!date) {
-            year = Season.getLatestSeason().startYear
+        if (seasonName) {
+            season = Season.findByName(seasonName)
         } else {
-            year = date[Calendar.YEAR]
+            season = Season.getLatestSeason()
         }
 
-        final def query = Season.where {
-            startYear == year
-        }
-
-        query.find()
+        season
     }
 
     public static def getLatestSeason() {

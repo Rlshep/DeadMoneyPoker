@@ -1,10 +1,23 @@
+var dataTable;
+
 function init() {
-    load();
-    initDatePicker();
+    $({}).queue(initDatePicker)
+        .queue(handleDateFromParam)
+        .queue(load);
+};
+
+function handleDateFromParam (next) {
+    var date = getUrlParameter('datePlayed');
+
+    if (date) {
+        $('#datePicker').val(date);
+    }
+
+    next();
 };
 
 function load() {
-    $('#resultsTable').DataTable({
+    dataTable = $('#resultsTable').DataTable({
         columns: [
             {"data" : "rank" },
             {"data" : "playerName"},
@@ -27,15 +40,14 @@ function load() {
         responsive: true,
         autoWidth: true,
         ajax: {
-            url: location.pathname + "/load"
+            url: location.pathname + "/load?selectedDate=" + $("#datePicker").val()
         },
         initComplete: function() {
             $('#datePicker').val($('#resultsTable').DataTable().row(0).data().datePlayed);
         }
     });
 };
-
-function initDatePicker() {
+function initDatePicker(next) {
     $.ajax({
 		  url: location.pathname + "/loadDateRange",
 		  dataType: "json",
@@ -48,17 +60,18 @@ function initDatePicker() {
              });
 
              setDatePickerEvent();
+             next();
     	});
 };
 
 function setDatePickerEvent() {
     $("#datePicker").off("change");
     $("#datePicker").on("change", function() {
-        reloadTable();
+        reloadTable(dataTable);
     });
 };
 
-function reloadTable() {
-    var url = location.pathname + "/load?resultDate=" + $("#datePicker").val();
-    $('#resultsTable').DataTable().ajax.url(url).load();
+function reloadTable(dataTable) {
+    var url = location.pathname + "/load?selectedDate=" + $("#datePicker").val();
+    dataTable.ajax.url(url).load();
 };

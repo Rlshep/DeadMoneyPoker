@@ -8,15 +8,7 @@ class ResultsController {
     }
 
     def load() {
-        def date;
-
-        if (params.resultDate) {
-            if (params.resultDate.length() == 7) {
-                date = new Date().parse(DeadMoneyPokerConstants.MONTH_FORMAT, params.resultDate)
-            }
-        }
-
-        render getResultsJson(date)
+        render getResultsJson(getDateFromParam())
     }
 
     def loadDateRange() {
@@ -26,5 +18,16 @@ class ResultsController {
 
     private getResultsJson(date) {
         ["data": Result.getResultsByMonthYear(date)] as JSON
+    }
+
+    private Date getDateFromParam() {
+        def date;
+
+        if (params.selectedDate) {
+            if (params.selectedDate.length() == 7) {
+                date = new Date().parse(DeadMoneyPokerConstants.MONTH_FORMAT, params.selectedDate)
+            }
+        }
+        date
     }
 }

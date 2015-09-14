@@ -12,12 +12,12 @@
     <asset:javascript src="application.js"/>
     <asset:javascript src="jquery-ui.js"/>
     <asset:javascript src="jquery.dataTables.js"/>
-    <!--<asset:javascript src="jquery.maskedinput.min.js"/>-->
     <asset:javascript src="MonthPicker.js"/>
+    <asset:javascript src="imageMapResizer.min.js"/>
     <asset:javascript src="date-en-US.js"/>
     <asset:javascript src="deadmoneypoker.js"/>
+    <asset:javascript src="menu.js"/>
 
-    <!--<asset:stylesheet src="jquery-ui.css"/>-->
     <asset:stylesheet src="deadmoneypoker.dataTables.css"/>
     <asset:stylesheet src="deadmoneypoker.css"/>
     <asset:stylesheet src="MonthPicker.css"/>
@@ -29,11 +29,12 @@
 </head>
 <body>
 <g:applyLayout name="header"/>
+<g:applyLayout name="menu"/>
 
-<!--<asset:image src="dm_background.jpg" id="background-screen-background-image"/>-->
 <asset:image src="dm_head.png" id="left-screen-background-image"/>
 <asset:image src="dm_middle.png" id="middle-screen-background-image"/>
 <asset:image src="dm_suits.png" id="right-screen-background-image"/>
+
 <div id="wrapper">
     <g:layoutBody/>
 </div>

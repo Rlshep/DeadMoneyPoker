@@ -54,7 +54,6 @@ html, body {
 
 #headerTitle {
 	color: white;
-	font-size: 200%;
 	font-family: Georgia,"Times New Roman",Times,serif;
 	font-size: 38px;
 	position: relative;
@@ -62,14 +61,47 @@ html, body {
     left: 30px;
 }
 
-A:link {text-decoration: none; color: #0076cd;}
-A:visited {text-decoration: none; color: #0076cd;}
-A:active {text-decoration: none; color: #0076cd;}
-A:hover {text-decoration: underline; color: #0076cd;}
+A:link {text-decoration: none; color: #ffffff;}
+A:visited {text-decoration: none; color: #ffffff;}
+A:active {text-decoration: none; color: #ffffff;}
+A:hover {text-decoration: underline; color: #cccccc;}
 
 .nowrap {
     white-space: nowrap;
 }
 .titleHead {
     margin: 0px 0px 6px 0px;
+}
+
+.tableHeader {
+	color: white;
+	font-family: Georgia,"Times New Roman",Times,serif;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#championshipLink {
+    float: right;
+    text-decoration: underline;
+}
+
+#menuContainer {
+    color: white;
+	font-family: Georgia,"Times New Roman",Times,serif;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+#menuResults {
+    position: fixed;
+    left: 90%;
+    top: 17%;
+    z-index: 101;
+}
+
+#menuStandings {
+    position: fixed;
+    left: 89%;
+    top: 37%;
+    z-index: 101;
 }

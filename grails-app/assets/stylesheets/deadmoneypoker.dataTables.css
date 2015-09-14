@@ -449,14 +449,6 @@ table.dataTable td {
   }
 }
 
-#tableTitle {
-	color: white;
-	font-size: 150%;
-	font-family: Georgia,"Times New Roman",Times,serif;
-	font-size: 18px;
-	font-weight: bold;
-}
-
 #tableContainer {
     color: white;
     position: fixed;
