@@ -61,8 +61,11 @@ dependencies {
     compile "org.hibernate:hibernate-ehcache"
     compile "org.grails.plugins:scaffolding"
     compile "org.postgresql:postgresql:9.4-1201-jdbc41"
+    compile 'com.github.jsimone:webapp-runner:8.0.24.0'
 
     runtime "org.grails.plugins:asset-pipeline"
+
+    runner 'com.github.jsimone:webapp-runner:8.0.24.0'
 
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"
@@ -76,14 +79,22 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
 }
-//
-//task copyToLib(type: Copy) {
-//    into "$buildDir/lib"
-//    from(configurations.compile)
-//}
 
 task stage {
     dependsOn installDist
 }
 
-//stage.dependsOn(copyToLib)
+task stage(dependsOn: ['copyRunner'])
+
+task javaExec(type: JavaExec){
+    main = "webapp.runner.launch.Main"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task copyRunner(type: Copy, dependsOn: 'build'){
+    from (configurations.runner.resolve()) {
+        include 'webapp-runner-*.jar'
+        rename {'webapp-runner.jar'}
+    }
+    into "${buildDir}/libs/"
+}
