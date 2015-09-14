@@ -1,0 +1,6 @@
+#Sun, 13 Sep 2015 21:02:41 -0400
+
+grails.env=development
+info.app.name=deadmoneypoker
+info.app.version=0.1
+info.app.grailsVersion=3.0.4
