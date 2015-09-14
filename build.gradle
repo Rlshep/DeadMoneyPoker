@@ -76,14 +76,14 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
 }
-
-task copyToLib(type: Copy) {
-    into "$buildDir/lib"
-    from(configurations.compile)
-}
+//
+//task copyToLib(type: Copy) {
+//    into "$buildDir/lib"
+//    from(configurations.compile)
+//}
 
 task stage {
     dependsOn installDist
 }
 
-stage.dependsOn(copyToLib)
+//stage.dependsOn(copyToLib)
