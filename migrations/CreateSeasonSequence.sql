@@ -7,6 +7,6 @@ CREATE SEQUENCE season_sequence
   START 1
   CACHE 1;
 ALTER TABLE season_sequence
-  OWNER TO rxailvkgvwsegn;
+  OWNER TO vtpjadxs;
 COMMENT ON SEQUENCE season_sequence
   IS 'Sequence for season id.';

@@ -7,6 +7,6 @@ CREATE SEQUENCE result_sequence
   START 1
   CACHE 1;
 ALTER TABLE result_sequence
-  OWNER TO rxailvkgvwsegn;
+  OWNER TO vtpjadxs;
 COMMENT ON SEQUENCE result_sequence
   IS 'Sequence for result id.';

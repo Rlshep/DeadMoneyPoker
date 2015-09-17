@@ -10,13 +10,10 @@
     <title><g:layoutTitle default="Dead Money Poker"/></title>
 
     <asset:javascript src="application.js"/>
-    <asset:javascript src="jquery-ui.js"/>
-    <asset:javascript src="jquery.dataTables.js"/>
+    <asset:javascript src="jquery-ui.min.js"/>
+    <asset:javascript src="jquery.dataTables.min.js"/>
     <asset:javascript src="MonthPicker.js"/>
-    <asset:javascript src="imageMapResizer.min.js"/>
     <asset:javascript src="date-en-US.js"/>
-    <asset:javascript src="deadmoneypoker.js"/>
-    <asset:javascript src="menu.js"/>
 
     <asset:stylesheet src="deadmoneypoker.dataTables.css"/>
     <asset:stylesheet src="deadmoneypoker.css"/>
