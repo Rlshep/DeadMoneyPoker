@@ -1,8 +1,0 @@
-{
-"version":3,
-"file":"common.js",
-"lineCount":2,
-"mappings":"A;AAAAA,QAASA,gBAAe,CAACC,CAAD,CAAU,CAEjC,OADOC,CACP,CADeC,MAAA,CAAO,MAAP,CAAgBF,CAAhB,CAA0B,UAA1B,CAAAG,KAAA,CAA2CC,MAAAC,SAAAC,OAA3C,CACf,GAAgBC,kBAAA,CAAmBN,CAAA,CAAM,CAAN,CAAAO,QAAA,CAAiB,KAAjB,CAAwB,GAAxB,CAAnB,CAFiB;",
-"sources":["common.unminified.js"],
-"names":["getUrlParameter","urlName","found","RegExp","exec","window","location","search","decodeURIComponent","replace"]
-}
