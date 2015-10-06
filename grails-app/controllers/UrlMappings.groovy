@@ -10,5 +10,6 @@ class UrlMappings {
         "/"(redirect:"/results")
         "500"(view:'/error')
         "404"(view:'/notFound')
+        "/league"(view:"/league")
     }
 }
