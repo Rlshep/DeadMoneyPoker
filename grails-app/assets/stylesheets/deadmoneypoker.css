@@ -92,16 +92,30 @@ A:hover {text-decoration: underline; color: #cccccc;}
 	font-weight: bold;
 }
 
-#menuResults {
+#menuSpade {
     position: fixed;
     left: 90%;
     top: 17%;
     z-index: 101;
 }
 
-#menuStandings {
+#menuDiamond {
+    position: fixed;
+    left: 90%;
+    top: 37%;
+    z-index: 101;
+}
+
+#menuClub {
+    position: fixed;
+    left: 90%;
+    top: 60%;
+    z-index: 101;
+}
+
+#menuHeart {
     position: fixed;
     left: 89%;
-    top: 37%;
+    top: 79%;
     z-index: 101;
 }

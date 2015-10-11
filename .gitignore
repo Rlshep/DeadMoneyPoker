@@ -110,5 +110,4 @@ _darcs
 .git
 .hg
 /manifest.yml
-build\
-build/*.*
+build/
