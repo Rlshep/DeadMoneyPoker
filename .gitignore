@@ -110,4 +110,9 @@ _darcs
 .git
 .hg
 /manifest.yml
+<<<<<<< HEAD
 build/
+=======
+.asscache
+build/*
+>>>>>>> origin/master

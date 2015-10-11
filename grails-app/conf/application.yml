@@ -94,7 +94,7 @@ environments:
     production:
         dataSource:
             dbCreate: update
-            url: jdbc:postgresql://localhost/richard_dev
+            url: jdbc:postgresql://localhost/richard_dev?user=postgres&password=Fekklar1
             properties:
                 jmxEnabled: true
                 initialSize: 5
