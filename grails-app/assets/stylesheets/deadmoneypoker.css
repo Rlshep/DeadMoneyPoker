@@ -84,38 +84,3 @@ A:hover {text-decoration: underline; color: #cccccc;}
     float: right;
     text-decoration: underline;
 }
-
-#menuContainer {
-    color: white;
-	font-family: Georgia,"Times New Roman",Times,serif;
-	font-size: 25px;
-	font-weight: bold;
-}
-
-#menuSpade {
-    position: fixed;
-    left: 90%;
-    top: 17%;
-    z-index: 101;
-}
-
-#menuDiamond {
-    position: fixed;
-    left: 90%;
-    top: 37%;
-    z-index: 101;
-}
-
-#menuClub {
-    position: fixed;
-    left: 90%;
-    top: 60%;
-    z-index: 101;
-}
-
-#menuHeart {
-    position: fixed;
-    left: 89%;
-    top: 79%;
-    z-index: 101;
-}

@@ -18,7 +18,8 @@
     <asset:stylesheet src="deadmoneypoker.dataTables.css"/>
     <asset:stylesheet src="deadmoneypoker.css"/>
     <asset:stylesheet src="MonthPicker.css"/>
-    <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" media="all" rel="stylesheet" type="text/css" />
+    <asset:stylesheet src="menu.css"/>
+        <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" media="all" rel="stylesheet" type="text/css" />
 
     <g:layoutHead/>
     <g:javascript library="core"/>
