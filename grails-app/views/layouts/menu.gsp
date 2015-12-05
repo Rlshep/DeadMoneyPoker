@@ -1,8 +1,12 @@
 <div id="menuContainer">
-    <div id="menuResults"><a href="/results">Results</a></div>
-    <div id="menuStandings"><a href="/standings">Standings</a></div>
-    <div id="menuLeague"><a href="/league">League</a></div>
-    <div id="menuRounds"><a href="/rounds">Rounds</a></div>
-    <div id="menuPayouts"><a href="/payouts">Payouts</a></div>
-    <div id="menuVariants"><a href="/variants">Variants</a></div>
+    <table id="menuTable">
+        <tr>
+            <td><a href="/results">Results</a></td>
+            <td><a href="/standings">Standings</a></td>
+            <td><a href="/league">League</a></td>
+            <td><a href="/rounds">Rounds</a></td>
+            <td><a href="/payouts">Payouts</a></td>
+            <td><a href="/variants">Variants</a></td>
+        </tr>
+    </table>
 </div>
