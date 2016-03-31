@@ -2,14 +2,14 @@
 	font-family: Georgia,"Times New Roman",Times,serif;
 	font-size: 20px;
 	font-weight: bold;
-	position: fixed;
+	position: relative;
 	z-index: 101;
 	left: 25%;
-	top: 50px;
+	top: 10px;
 }
 
 #menuTable {
    display: table;
-   width: 90%;
+   width: 68%;
    table-layout: fixed;
 }
